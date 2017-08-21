@@ -14,5 +14,5 @@ It's a simple to-do app for organizing your to-do lists.
 ------------------------
 They are in the /src directory
 
-If you find a bug or some issue please open an issue.
+### If you find a bug or some issue please let me know.
 
