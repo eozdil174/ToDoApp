@@ -1,0 +1,2 @@
+Make a password generator with ui (add encryption too)
+Clipboard manager
