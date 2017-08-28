@@ -1,0 +1,5 @@
+Make a clipboard manager
+Reminder App
+Delete the copy to clipboard button when 50 character warning shows up
+Gui for ToDoApp
+Focus timer

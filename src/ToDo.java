@@ -12,13 +12,14 @@ public class ToDo {
 
     static Scanner scn = new Scanner(System.in);
     static int lineNum = 0;
+    static ArrayList<String> todoList = new ArrayList<String>();
+
     public static void main(String[] args) {
 
         File file = new File("todo.txt");       //List location
         String answer = null;
 
         while (answer != "0") {
-
             if (file.exists() == true) {
                 System.out.println("Todo File Found");
                 System.out.println("Active Tasks: \n");
@@ -30,6 +31,7 @@ public class ToDo {
                     String line;
                     while ((line = bufferedReader.readLine()) != null) {
                         System.out.println(lineNum + "- " + line);      //Reading the text line by line and writing to the screen
+                        todoList.add(line);
                         lineNum++;
                     }
                     reader.close();
@@ -57,6 +59,8 @@ public class ToDo {
                     System.out.println("Error!");
             }
         }
+
+
     }       //Main method for taking input and reading todoList
 
     static void removeTask() {
