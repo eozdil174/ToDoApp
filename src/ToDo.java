@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 
@@ -8,19 +7,14 @@ import java.io.BufferedWriter;
  *
  * @author eozdil
  */
-public class ToDo {
+public class ToDo{
 
-    static Scanner scn = new Scanner(System.in);
     static int lineNum = 0;
     static ArrayList<String> todoList = new ArrayList<String>();
 
-    public static void main(String[] args) {
+    static void getList(){File file = new File("todo.txt");       //List location
 
-        File file = new File("todo.txt");       //List location
-        String answer = null;
-
-        while (answer != "0") {
-            if (file.exists() == true) {
+        if (file.exists()) {
                 System.out.println("Todo File Found");
                 System.out.println("Active Tasks: \n");
                 lineNum = 1;
@@ -42,31 +36,16 @@ public class ToDo {
             } else {
                 System.out.println("File not found. Creating the file.");
             }
+    }
 
-            System.out.println("\nWhat do you want to do?" + "\n 1- Add new task\n 2- Set a task as completed \n 0- Exit");     //Taking input from user
-            answer = scn.nextLine();
-            switch (answer) {
-                case "1":
-                    addTask();
-                    break;
-                case "2":
-                    removeTask();
-                    break;
-                case "0":
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Error!");
-            }
-        }
-
-
+    public static void main(String[] args) {
+        getList();
     }       //Main method for taking input and reading todoList
 
     static void removeTask() {
         int choice;
         System.out.println("Which item do you want to remove? ");       //Taking input from user
-        choice = scn.nextInt();
+        choice = 1; //The task number for deleting. Replace with gui button or textBox
 
         ArrayList<String> list = new ArrayList<String>();           //Making an arrayList for keeping the items
         int number = 1;
@@ -97,20 +76,14 @@ public class ToDo {
 
     }    //Removing completed tasks
 
+    static String todo;
     static void addTask() {
-        System.out.println("Your new task: ");      //Taking input from user
-        String todo;
-        char choice;
-        Scanner scn = new Scanner(System.in);
-
-        todo = scn.nextLine();
-
+              //Taking input from user
         try {
             FileWriter writer = new FileWriter("todo.txt", true);
             BufferedWriter bfWriter = new BufferedWriter(writer);
 
-            bfWriter.write(todo);           //Writing new task to text file
-            bfWriter.newLine();
+            bfWriter.write(todo + "\n");           //Writing new task to text file
             lineNum++;
             bfWriter.close();
         } catch (IOException e) {
