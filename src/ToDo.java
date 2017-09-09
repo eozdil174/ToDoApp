@@ -15,16 +15,14 @@ public class ToDo{
     static void getList(){File file = new File("todo.txt");       //List location
 
         if (file.exists()) {
-                System.out.println("Todo File Found");
-                System.out.println("Active Tasks: \n");
-                lineNum = 1;
+
+            lineNum = 1;
                 try {
                     FileReader reader = new FileReader("todo.txt");
                     BufferedReader bufferedReader = new BufferedReader(reader);
 
                     String line;
                     while ((line = bufferedReader.readLine()) != null) {
-                        System.out.println(lineNum + "- " + line);      //Reading the text line by line and writing to the screen
                         todoList.add(line);
                         lineNum++;
                     }
@@ -82,8 +80,8 @@ public class ToDo{
         try {
             FileWriter writer = new FileWriter("todo.txt", true);
             BufferedWriter bfWriter = new BufferedWriter(writer);
-
-            bfWriter.write(todo + "\n");           //Writing new task to text file
+            bfWriter.newLine();
+            bfWriter.write(todo);           //Writing new task to text file
             lineNum++;
             bfWriter.close();
         } catch (IOException e) {
