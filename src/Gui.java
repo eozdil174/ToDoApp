@@ -1,15 +1,13 @@
-import com.sun.xml.internal.bind.v2.TODO;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.font.FontRenderContext;
 import javax.swing.*;
-import javax.swing.border.Border;
 
 public class Gui extends ToDo{
     public static JFrame frame = new JFrame("ToDoApp");
     public static JTextArea todoOutput = new JTextArea();
+    public static JComboBox removeComboBox = new JComboBox();
+    public static  JComboBox editTaskComboBox = new JComboBox();
 
     public static void main(String[] args) {
         frame.setSize(800, 600);
@@ -24,10 +22,6 @@ public class Gui extends ToDo{
         JPanel controlPanel = new JPanel();
         controlPanel.setBackground(new Color(39, 70, 89));
         controlPanel.setBounds(400, 0, 400, 600);
-
-        JComboBox
-
-
 
         /* ListPanel components */
 
@@ -68,6 +62,17 @@ public class Gui extends ToDo{
         newTaskInput.setForeground(Color.white);
         newTaskInput.setFont(new Font("Roboto",Font.PLAIN,16));
         newTaskInput.setBorder(null);
+        newTaskInput.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                todo = newTaskInput.getText();
+                addTask();
+                newTaskInput.setText(null);
+                todoList.clear();
+                todoOutput.setText(null);
+                showList();
+            }
+        });
         controlPanel.add(newTaskInput);
 
         JSeparator taskInpSeparator = new JSeparator();
@@ -78,6 +83,7 @@ public class Gui extends ToDo{
         JButton addNewTaskButton = new JButton("Add New Task");
         addNewTaskButton.setForeground(Color.white);
         addNewTaskButton.setBackground(new Color(51, 109, 163));
+        addNewTaskButton.setFont(new Font("Roboto", Font.PLAIN, 15));
         addNewTaskButton.setBorder(null);
         addNewTaskButton.setBounds(200,85,150,25);
         addNewTaskButton.addActionListener(new ActionListener() {
@@ -93,6 +99,99 @@ public class Gui extends ToDo{
         });
         controlPanel.add(addNewTaskButton);
 
+        JSeparator removeSeparator = new JSeparator();
+        removeSeparator.setForeground(Color.white);
+        removeSeparator.setBounds(0,150,400,15);
+        controlPanel.add(removeSeparator);
+
+        removeComboBox.setBounds(280,180,70,25);
+        removeComboBox.setFont(new Font("Roboto",Font.BOLD,14));
+        controlPanel.add(removeComboBox);
+
+        JLabel removeLabel = new JLabel("Select the task number for deleting");
+        removeLabel.setForeground(Color.white);
+        removeLabel.setFont(new Font("Roboto",Font.PLAIN,14));
+        removeLabel.setBounds(50,181,250,25);
+        controlPanel.add(removeLabel);
+
+        JButton removeTaskButton = new JButton("Remove Selected Task");
+        removeTaskButton.setBackground(new Color(51, 109, 163));
+        removeTaskButton.setForeground(Color.white);
+        removeTaskButton.setFont(new Font("Roboto",Font.PLAIN,15));
+        removeTaskButton.setBorder(null);
+        removeTaskButton.setBounds(150,220,200,25);
+        removeTaskButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                choice = removeComboBox.getSelectedIndex() + 1;
+                removeTask();
+                showList();
+            }
+        });
+        controlPanel.add(removeTaskButton);
+
+        /* Edit part components */
+
+        JSeparator midSeparator = new JSeparator();
+        midSeparator.setForeground(Color.white);
+        midSeparator.setBounds(0,300,400,15);
+        controlPanel.add(midSeparator);
+
+        JLabel editTaskLabel = new JLabel("Edit a Task");
+        editTaskLabel.setForeground(Color.white);
+        editTaskLabel.setFont(new Font("Roboto",Font.PLAIN,13));
+        editTaskLabel.setBounds(50,340,150,25);
+        controlPanel.add(editTaskLabel);
+
+        JTextField editTaskTf = new JTextField(30);
+        editTaskTf.setFont(new Font("Roboto", Font.PLAIN,16));
+        editTaskTf.setForeground(Color.white);
+        editTaskTf.setBackground(new Color(39, 70, 89));
+        editTaskTf.setBorder(null);
+        editTaskTf.setBounds(50,370,300,25);
+        editTaskTf.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                editedTask = editTaskTf.getText();
+                editNum = editTaskComboBox.getSelectedIndex() + 1;
+                editTask();
+                showList();
+            }
+        });
+        controlPanel.add(editTaskTf);
+
+        JSeparator editTaskTfSeparator = new JSeparator();
+        editTaskTfSeparator.setForeground(Color.white);
+        editTaskTfSeparator.setBounds(50,396,300,15);
+        controlPanel.add(editTaskTfSeparator);
+
+        JButton editTaskButton = new JButton("Edit Task");
+        editTaskButton.setBackground(new Color(51, 109, 163));
+        editTaskButton.setForeground(Color.white);
+        editTaskButton.setFont(new Font("Roboto",Font.PLAIN,15));
+        editTaskButton.setBorder(null);
+        editTaskButton.setBounds(200,416,150,25);
+        editTaskButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                editedTask = editTaskTf.getText();
+                editNum = editTaskComboBox.getSelectedIndex() + 1;
+                editTask();
+                showList();
+            }
+        });
+        controlPanel.add(editTaskButton);
+
+        editTaskComboBox.setBounds(140,416,50,25);
+        editTaskButton.setFont(new Font("Roboto",Font.BOLD,14));
+        controlPanel.add(editTaskComboBox);
+
+        JLabel editComboboxLabel = new JLabel("Task Number");
+        editComboboxLabel.setForeground(Color.white);
+        editComboboxLabel.setFont(new Font("Roboto",Font.PLAIN,13));
+        editComboboxLabel.setBounds(50,416,100,25);
+        controlPanel.add(editComboboxLabel);
+
         listPanel.setLayout(null);
         frame.add(listPanel);
         controlPanel.setLayout(null);
@@ -102,10 +201,20 @@ public class Gui extends ToDo{
     }
 
     public static void showList() {
+        todoList.clear();
+        todoOutput.setText(null);
+        removeComboBox.removeAllItems();
         getList();
         for (int i = 0;i <todoList.size();i++)
         {
             todoOutput.append((i+1) + "- " + todoList.get(i) + "\n");
         }
+
+        for(int i = 0;i<todoList.size();i++)
+        {
+            removeComboBox.addItem(i +1);
+            editTaskComboBox.addItem(i +1);
+        }
+
     }
 }

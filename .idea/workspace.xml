@@ -7,11 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc0423b1-26ae-402d-bdf3-36f42c62fc87" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ToDoApp/addTaskTab$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ToDoApp/addTaskTab$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/ToDoApp/addTaskTab.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/addTaskTab.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToDoApp/Gui$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToDoApp/Gui$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToDoApp/Gui$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/ToDoApp/Gui$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ToDoApp/Gui$1.class" afterPath="$PROJECT_DIR$/out/production/ToDoApp/Gui$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ToDoApp/Gui.class" afterPath="$PROJECT_DIR$/out/production/ToDoApp/Gui.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ToDoApp/ToDo.class" afterPath="$PROJECT_DIR$/out/production/ToDoApp/ToDo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Gui.java" afterPath="$PROJECT_DIR$/src/Gui.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ToDo.java" afterPath="$PROJECT_DIR$/src/ToDo.java" />
@@ -36,14 +38,11 @@
       <file leaf-file-name="ToDo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ToDo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-137">
-              <caret line="34" column="73" lean-forward="true" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
+            <state relative-caret-position="369">
+              <caret line="104" column="36" lean-forward="false" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#ToDo#0" expanded="false" />
-                <element signature="e#1065#1066#0" expanded="true" />
-                <element signature="e#1090#1091#0" expanded="true" />
-                <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
                 <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
               </folding>
             </state>
@@ -53,8 +52,8 @@
       <file leaf-file-name="Gui.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Gui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="161">
+              <caret line="106" column="39" lean-forward="false" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/todo.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,6 +96,7 @@
         <option value="$PROJECT_DIR$/src/addTaskTab.java" />
         <option value="$PROJECT_DIR$/src/Test.form" />
         <option value="$PROJECT_DIR$/todo.txt" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/ToDo.java" />
         <option value="$PROJECT_DIR$/src/Gui.java" />
       </list>
@@ -123,6 +123,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,10 +142,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,9 +312,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32792208" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32686085" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -384,24 +384,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Gui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/addTaskTab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/addTaskTab.java" />
     <entry file="file://$PROJECT_DIR$/todo.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -417,22 +400,12 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/addTaskTab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/addTaskTab.java" />
     <entry file="file://$PROJECT_DIR$/todo.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -458,9 +431,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -491,9 +461,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -524,9 +491,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -557,9 +521,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -590,9 +551,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -623,9 +581,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -656,9 +611,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -689,9 +641,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -722,9 +671,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -745,9 +691,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -768,32 +711,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
-            <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ToDo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -814,9 +731,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -837,9 +751,26 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
+            <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ToDo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -857,24 +788,22 @@
     <entry file="file://$PROJECT_DIR$/src/asd.java" />
     <entry file="file://$PROJECT_DIR$/src/Test.java" />
     <entry file="file://$PROJECT_DIR$/src/Test.form" />
-    <entry file="file://$PROJECT_DIR$/src/addTaskTab.java">
+    <entry file="file://$PROJECT_DIR$/src/addTaskTab.java" />
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        <state relative-caret-position="92">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ToDo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-137">
-          <caret line="34" column="73" lean-forward="true" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
+        <state relative-caret-position="369">
+          <caret line="104" column="36" lean-forward="false" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ToDo#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="method#removeTask#0;class#ToDo#0" expanded="false" />
             <element signature="method#addTask#0;class#ToDo#0" expanded="false" />
           </folding>
         </state>
@@ -883,15 +812,15 @@
     <entry file="file://$PROJECT_DIR$/todo.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Gui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="161">
+          <caret line="106" column="39" lean-forward="false" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -40,10 +40,8 @@ public class ToDo{
         getList();
     }       //Main method for taking input and reading todoList
 
+    static int choice;
     static void removeTask() {
-        int choice;
-        System.out.println("Which item do you want to remove? ");       //Taking input from user
-        choice = 1; //The task number for deleting. Replace with gui button or textBox
 
         ArrayList<String> list = new ArrayList<String>();           //Making an arrayList for keeping the items
         int number = 1;
@@ -80,8 +78,8 @@ public class ToDo{
         try {
             FileWriter writer = new FileWriter("todo.txt", true);
             BufferedWriter bfWriter = new BufferedWriter(writer);
-            bfWriter.newLine();
             bfWriter.write(todo);           //Writing new task to text file
+            bfWriter.newLine();
             lineNum++;
             bfWriter.close();
         } catch (IOException e) {
@@ -90,10 +88,41 @@ public class ToDo{
 
 
         }       //Adding new task
+
+    static String editedTask;
+    static int editNum;
+    static void editTask(){
+
+        ArrayList<String> list = new ArrayList<String>();           //Making an arrayList for keeping the items
+        int number = 1;
+
+        try {
+            FileReader reader = new FileReader("todo.txt");
+            BufferedReader bufferedReader = new BufferedReader(reader);
+
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                if(number != editNum)
+                {
+                    list.add(line);       //Adding items to arrayList
+                }
+                else {
+                    list.add(editedTask);
+                }
+                number++;
+            }
+            reader.close();
+
+            PrintWriter outFile = new PrintWriter(new FileWriter("todo.txt"));
+            for(int i = 0; i < list.size(); i++){
+                outFile.println(list.get(i));               //Writing arrayList to main text again
+            }
+            outFile.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
-
-
-
-
-
+}
