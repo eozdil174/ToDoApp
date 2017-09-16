@@ -9,8 +9,9 @@ public class Gui extends ToDo {
     public static JComboBox removeComboBox = new JComboBox();
     public static  JComboBox editTaskComboBox = new JComboBox();
     public static JCheckBox notifCheckbox = new JCheckBox("Notification");
+    public static JSpinner notifSpinner = new JSpinner();
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         frame.setSize(800, 600);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -83,6 +84,7 @@ public class Gui extends ToDo {
         controlPanel.add(taskInpSeparator);
 
         SpinnerModel model1 = new SpinnerDateModel();
+        notifSpinner.setModel(model1);
         notifSpinner.setBounds(220,120,130,25);
         controlPanel.add(notifSpinner);
 
@@ -234,6 +236,6 @@ public class Gui extends ToDo {
     }
 
     public static void setNotif(){
-
+     new NotificationBackgroundTask();
     }
 }
