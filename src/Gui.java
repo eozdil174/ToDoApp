@@ -8,8 +8,6 @@ public class Gui extends ToDo {
     public static JTextArea todoOutput = new JTextArea();
     public static JComboBox removeComboBox = new JComboBox();
     public static  JComboBox editTaskComboBox = new JComboBox();
-    public static JCheckBox notifCheckbox = new JCheckBox("Notification");
-    public static JSpinner notifSpinner = new JSpinner();
 
     public static void main(String[] args) {
         frame.setSize(800, 600);
@@ -68,7 +66,6 @@ public class Gui extends ToDo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 todo = newTaskInput.getText();
-                if(notifCheckbox.isSelected())setNotif();
                 addTask();
                 newTaskInput.setText(null);
                 todoList.clear();
@@ -83,11 +80,6 @@ public class Gui extends ToDo {
         taskInpSeparator.setBounds(50,65,300,15);
         controlPanel.add(taskInpSeparator);
 
-        SpinnerModel model1 = new SpinnerDateModel();
-        notifSpinner.setModel(model1);
-        notifSpinner.setBounds(220,120,130,25);
-        controlPanel.add(notifSpinner);
-
         JButton addNewTaskButton = new JButton("Add New Task");
         addNewTaskButton.setForeground(Color.white);
         addNewTaskButton.setBackground(new Color(51, 109, 163));
@@ -98,7 +90,6 @@ public class Gui extends ToDo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 todo = newTaskInput.getText();
-                if(notifCheckbox.isSelected())setNotif();
                 addTask();
                 newTaskInput.setText(null);
                 todoList.clear();
@@ -107,18 +98,6 @@ public class Gui extends ToDo {
             }
         });
         controlPanel.add(addNewTaskButton);
-
-        notifCheckbox.setFont(new Font("Roboto", Font.PLAIN,13));
-        notifCheckbox.setBackground(new Color(39, 70, 89));
-        notifCheckbox.setForeground(Color.white);
-        notifCheckbox.setBounds(50,90,100,15);
-        controlPanel.add(notifCheckbox);
-
-        JLabel notifLabel = new JLabel("Select a time for notification");
-        notifLabel.setFont(new Font("Roboto", Font.PLAIN,13));
-        notifLabel.setForeground(Color.white);
-        notifLabel.setBounds(50,120,200,25);
-        controlPanel.add(notifLabel);
 
         JSeparator removeSeparator = new JSeparator();
         removeSeparator.setForeground(Color.white);
@@ -233,9 +212,5 @@ public class Gui extends ToDo {
             editTaskComboBox.addItem(i +1);
         }
 
-    }
-
-    public static void setNotif(){
-     new NotificationBackgroundTask();
     }
 }

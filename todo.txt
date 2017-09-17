@@ -1,2 +1,0 @@
-Android night automate
-Add notification and time functions to this app
