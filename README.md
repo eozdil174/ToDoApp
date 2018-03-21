@@ -1,6 +1,6 @@
 # ToDoApp
 -------------
-It's a simple to-do app for organizing your to-do lists.
+It's a simple to-do app which uses a .txt file to save tasks. It can be useful for anyone who is interested with text input - output processes. 
 
 
 ## How can I use?
@@ -15,4 +15,6 @@ It's a simple to-do app for organizing your to-do lists.
 They are in the /src directory
 
 ### If you find a bug or some issue please let me know.
+
+
 
